@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		465F1FCE244746E7009C8CC8 /* DP53maxSubarray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 465F1FCD244746E7009C8CC8 /* DP53maxSubarray.cpp */; };
+		465F2000245040FA009C8CC8 /* f19 minimizing layovers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 465F1FFF245040FA009C8CC8 /* f19 minimizing layovers.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +25,8 @@
 /* Begin PBXFileReference section */
 		465F1FC32447462A009C8CC8 /* leetcodePrac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leetcodePrac; sourceTree = BUILT_PRODUCTS_DIR; };
 		465F1FCD244746E7009C8CC8 /* DP53maxSubarray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DP53maxSubarray.cpp; sourceTree = "<group>"; };
+		465F1FFD244C86ED009C8CC8 /* rangeQueriesW19ques.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rangeQueriesW19ques.cpp; sourceTree = "<group>"; };
+		465F1FFF245040FA009C8CC8 /* f19 minimizing layovers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "f19 minimizing layovers.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,8 @@
 		465F1FBA2447462A009C8CC8 = {
 			isa = PBXGroup;
 			children = (
+				465F1FFD244C86ED009C8CC8 /* rangeQueriesW19ques.cpp */,
+				465F1FFF245040FA009C8CC8 /* f19 minimizing layovers.cpp */,
 				465F1FCD244746E7009C8CC8 /* DP53maxSubarray.cpp */,
 				465F1FC42447462A009C8CC8 /* Products */,
 			);
@@ -110,7 +114,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				465F1FCE244746E7009C8CC8 /* DP53maxSubarray.cpp in Sources */,
+				465F2000245040FA009C8CC8 /* f19 minimizing layovers.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
