@@ -21,7 +21,7 @@ enum class Color: unsigned char {black, white, gray};//enum
 struct Airport{
 	string code = "";
 //	string parent_code = ""; //empty string
-	int distance_from_origin = std::numeric_limits<int>::infinity();
+	int distance_from_origin = -1;
 	Color color = Color::white; //white represents that this node hasn't been set. black represents that this airport has been set (aka the closest distance from the origin to it has been found).
 	
 	Airport(){};
@@ -104,19 +104,25 @@ int fewestLayovers(vector<vector<string>>& flights, string origin, string dest){
 		
 		auto airport_u = adj_list.find(u->code);
 		
-		for(size_t i = 0; i < airport_u->second.size(); ++i){
+		//if airport u has outgoing destinations
+		if(airport_u != adj_list.end()){
+		
+			for(size_t i = 0; i < airport_u->second.size(); ++i){
+				
+				if(airport_u->second.at(i)->color == Color::white){
+					
+					airport_u->second.at(i)->color = Color::gray;
+					airport_u->second.at(i)->distance_from_origin = u->distance_from_origin + 1;
+					
+					//add this adjacent airport to the queue.
+					the_queue.push(airport_u->second.at(i));
+					
+				}//if the color of this adjacent airport to u is white, then it is unvisited.
+				
+			}//this for loop traverses thru the adjacency list of u.
 			
-			if(airport_u->second.at(i)->color == Color::white){
-				
-				airport_u->second.at(i)->color = Color::gray;
-				airport_u->second.at(i)->distance_from_origin = u->distance_from_origin + 1;
-				
-				//add this adjacent airport to the queue.
-				the_queue.push(airport_u->second.at(i));
-				
-			}//if the color of this adjacent airport to u is white, then it is unvisited.
-			
-		}//this for loop traverses thru the adjacency list of u.
+		}//this for loop only runs if airport_u has an adjacency list in the first place.
+		//...cuz it is possible that we can from dtw to sea but sea doesn't go anywhere so sea's adjacency list is non-existent. so u's adj_list represents where u can go to from this particular airport u.
 		
 		//after all the previously white elements that were adjacent to airport u have been visited,
 		//we can mark u as black.
@@ -148,7 +154,7 @@ int main(){
 		{"ATL", "DTW"}
 	};
 	
-	cout << fewestLayovers(flights_test_two, "DTW", "SFO");
+	cout << fewestLayovers(flights_test_two, "DTW", "ATL");
 	return 0;
 }
 
