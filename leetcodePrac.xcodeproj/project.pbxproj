@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		465F2000245040FA009C8CC8 /* f19 minimizing layovers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 465F1FFF245040FA009C8CC8 /* f19 minimizing layovers.cpp */; };
+		465F20022451A1D7009C8CC8 /* getMaxNuts Fall 2019.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 465F20012451A1D7009C8CC8 /* getMaxNuts Fall 2019.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +27,7 @@
 		465F1FCD244746E7009C8CC8 /* DP53maxSubarray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DP53maxSubarray.cpp; sourceTree = "<group>"; };
 		465F1FFD244C86ED009C8CC8 /* rangeQueriesW19ques.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rangeQueriesW19ques.cpp; sourceTree = "<group>"; };
 		465F1FFF245040FA009C8CC8 /* f19 minimizing layovers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "f19 minimizing layovers.cpp"; sourceTree = "<group>"; };
+		465F20012451A1D7009C8CC8 /* getMaxNuts Fall 2019.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "getMaxNuts Fall 2019.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +44,7 @@
 		465F1FBA2447462A009C8CC8 = {
 			isa = PBXGroup;
 			children = (
+				465F20012451A1D7009C8CC8 /* getMaxNuts Fall 2019.cpp */,
 				465F1FFD244C86ED009C8CC8 /* rangeQueriesW19ques.cpp */,
 				465F1FFF245040FA009C8CC8 /* f19 minimizing layovers.cpp */,
 				465F1FCD244746E7009C8CC8 /* DP53maxSubarray.cpp */,
@@ -114,7 +116,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				465F2000245040FA009C8CC8 /* f19 minimizing layovers.cpp in Sources */,
+				465F20022451A1D7009C8CC8 /* getMaxNuts Fall 2019.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
