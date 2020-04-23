@@ -114,6 +114,10 @@ int fewestLayovers(vector<vector<string>>& flights, string origin, string dest){
 					airport_u->second.at(i)->color = Color::gray;
 					airport_u->second.at(i)->distance_from_origin = u->distance_from_origin + 1;
 					
+					if(airport_u->second.at(i)->code == dest)
+						break; //if we have reached the destination airport, then break outta here cuz
+					//...we just updated its distance from origin (we have found the shortest path to it).
+					
 					//add this adjacent airport to the queue.
 					the_queue.push(airport_u->second.at(i));
 					
@@ -154,7 +158,7 @@ int main(){
 		{"ATL", "DTW"}
 	};
 	
-	cout << fewestLayovers(flights_test_two, "DTW", "ATL");
+	cout << fewestLayovers(flights_test_two, "DTW", "ATL") << endl;
 	return 0;
 }
 

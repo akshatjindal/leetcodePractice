@@ -101,7 +101,7 @@ int main(){
 		{6,9}
 	}; //a 3 * 2 matrix
 	
-	assert(getMaxNuts(test_three, 3, 2));
+	assert(getMaxNuts(test_three, 3, 2) == 13);
 	
 	
 	
