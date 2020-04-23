@@ -17,59 +17,78 @@ class Solution {
 public:
 	int maxProfit(vector<int>& prices, int fee) {
 		
-		vector<vector<int>> profit;
-		profit.reserve(2);
-		profit.resize(2);
 		
-		for(size_t i = 0 ; i < 2; ++i){
+		int smallestValSoFar = prices.at(0);
+		int indexOfSmallestSoFar = 0;
 		
-			vector<int> temp;
-			temp.reserve(prices.size());
-			temp.resize(prices.size());
-			profit[i] = temp;
-			temp.clear();
+		for(int i = 1; i < prices.size(); ++i){
 			
-		}//for that creates a 2d vector reperesenting a 2 by n matrix where n = num of stocks = prices.size
-		//the zeroth row represents max profit at that stock if you own stock
-		//the first row represents max profit at that stock if you don't own any stock at that point.
-		
-		//initializing the zeroth column
-		profit[0][0] = -1 * prices.at(0);
-		profit[1][0] = 0;
-		
-		//start at 1 cuz zeroth col has been populated already
-		for(size_t col = 1; col < prices.size(); ++col){
+			if(prices.at(i) > smallestValSoFar)
+				break;
 			
-			for(size_t row = 0; row < 2; ++row){
+			//else
+			if(prices.at(i) < smallestValSoFar){
+				smallestValSoFar = prices.at(i);
+				indexOfSmallestSoFar = i;
+			}
+				
+			
+		}//this finds the first elem such that there is a higher elem to the right of it.
+		//so if this prices vector is a completely decreasing vector, we can just return 0.
+		
+		if(indexOfSmallestSoFar == (prices.size() - 1))
+			return 0;
+		
+		//this is a bottom up DP approach, the 0th elem of both of these vectors represents the max profit
+		//...given that u own a stock at this particular point.
+		
+		//the 1st elem of both of these vectors represents the max profit given that u don't own a stock at
+		//...at this point.
+		
+		vector<int> penUltimateCol;
+		vector<int> ultimateCol;
+		penUltimateCol.reserve(2);
+		ultimateCol.reserve(2);
+		penUltimateCol.resize(2);
+		ultimateCol.resize(2);
+		
+		//initialize penUltimateCol;
+		penUltimateCol[0] = -1 * prices.at(indexOfSmallestSoFar); //at the start, if u own the zeroth stock, then ur prof is -1 * the price of the stock
+		penUltimateCol[1] = 0;
+		
+		for(size_t stocknum = indexOfSmallestSoFar; stocknum < prices.size(); ++stocknum){
+			
+			for(size_t row = 0; row <= 1; ++row){
 				
 				if(row == 0){
 					
 					//in order to own a stock, i want the max of the previous time i own the stocked
 					//...or buying a stock from scratch
-					profit[row][col] = max(profit[row][col-1], profit[row + 1][col - 1] - prices.at(col));
 					
-				}//if we are in the row that represents "owns stock"
+					ultimateCol[0] = max(penUltimateCol[0], penUltimateCol[1] - prices.at(stocknum));
+					
+				} //row == 0 represents max profit when u own a stock
 				
-				else {
+				else{
 					
 					/*in order to not own a stock, i either sell the stock i previously owned, or i
 					 continue not owning a stock
 					 
 					 when i sell the stock i currently owned, i need to pay the transaction fee*/
 					
-					profit[row][col] = max(profit[row - 1][col -1] + prices.at(col) - fee, profit[row][col - 1]);
+					ultimateCol[1] = max(penUltimateCol[0] + prices.at(stocknum) - fee, penUltimateCol[1]);
 					
-				}//if we are in the row that represents "don't own stock"
+				}//when row == 1, this represents max profit when u don't own a stock.
 				
-			}//inner for loop that goes thru the rows
+			}//inner for loop goes thru the 2 rows. the zeroth row and the first row represent different things.
 			
-		}//for loop that populates column by column the best prices yet.
+			penUltimateCol[0] = ultimateCol[0];
+			penUltimateCol[1] = ultimateCol[1];
+			
+			
+		}//for loop that goes thru each stock (except for the zeroth one) and updates the vectors with the best possible price yet.
 		
-		int maxGain = profit[0][prices.size()-1];
-		if(profit[1][prices.size()-1] > maxGain)
-			maxGain = profit[1][prices.size()-1];
-		
-		return maxGain;
+		return max(ultimateCol[0], ultimateCol[1]);
 	}//func
 };//class
 
