@@ -11,6 +11,7 @@
 #include <iostream>
 using namespace std;
 
+
 class Solution {
 public:
 	int numRollsToTarget(int d, int f, int target) {
@@ -18,75 +19,75 @@ public:
 		if(target > (d*f))
 			return 0;
 		
-		if(target < d)
-			return 0; //cuz each die must atleast throw 1 and so there is no way to achieve 50 by using 55 dice.
+		vector<vector<int>> memo;
+		memo.reserve(target + 1);
+		memo.resize(target + 1);
 		
-		if(d <= 1 && target <= (f*d))
-			return 1;
+		for(size_t i = 0 ; i < memo.size(); ++i){
+			vector<int> temp;
+			temp.reserve(d + 1);
+			temp.resize(d + 1);
+			memo[i] = temp;
+			temp.clear();
+			
+		}//for loop that pushes back d number of dies. the cols are going to represent number of die used thus far.
 		
-		vector<int> penultimateDiceThrow;
-		vector<int> lastDiceThrow;
-		penultimateDiceThrow.reserve(target + 1);
-		penultimateDiceThrow.resize(target + 1);
-		lastDiceThrow.reserve(target + 1);
-		lastDiceThrow.resize(target + 1);
 		
-		int tempEndIndex = f;
+		int temp = f;
 		if(f > target)
-			tempEndIndex = target;
+			temp = target;
 		
-		for(size_t row = 1; row <= tempEndIndex; ++row){
+		//start at row = 1 cuz 1 die will never roll a 0 (so the 0th row is all 0's - its essentially to comply w/ zero based indexing)
+		for(size_t row = 1; row <= temp; ++row){
 			
-			penultimateDiceThrow[row] = 1;
-			//with one die throw, there is one way to reach a sum of 1,2,3...,f
+			memo[row][1] = 1;//with 1 die, there is only one way to roll a 3 or a 4 given that faces f >=4;
 			
-		}//for loop that initalizes the penUltimateVector (for the first dice throw).
+		}//for loop that populates the first column.
 		
+		if(d < 2)
+			return memo[target][d]; //if only one die, return either a 0 or a 1.
 		
 		for(size_t die_used = 2; die_used <= d; ++die_used){
 			
-			int tempEndIndex = int(die_used*f);
-			//if target > the max sum possible at that die throw, then loop till that max sum possible.
-			
+			int tempEndIndex = int(die_used*f); //if target < the max sum possible at that die throw, then loop till that max sum possible.
 			if(tempEndIndex > target)
-				tempEndIndex = target; //we don't wanna loop past the target if possible.
+				tempEndIndex = target; //we only wanna loop to target sum if possible
 			
 			for(size_t sum_achieved = die_used; sum_achieved <= tempEndIndex; ++sum_achieved){
 				
 				if(sum_achieved == die_used)
-					lastDiceThrow[sum_achieved] = 1;
+					memo[sum_achieved][die_used] = 1;
 				//so memo[2][2] means that after rolling 2 die, there is only one way to get to a sum of 2.
 				
 				else{
-					int sumOfPreviousFRolls = 0;
+					//say we are on [2][8], and f = 6, then we wanna dgo from [8-6][1] to [1*f = 6][1] and sum it all together.
+					int sum = 0;
+					
 					int tempStartIndex = int(sum_achieved - f);
 					if(tempStartIndex < 1)
 						tempStartIndex = 1;
 					
-					int end_index = int((die_used - 1)*f);
-					if(end_index >= sum_achieved)
-						end_index = int(sum_achieved - 1);
+					int tempEndIndex = int((die_used - 1)*f);
+					if(tempEndIndex >= sum_achieved)
+						tempEndIndex = int(sum_achieved - 1);
 					
-					for(size_t index = tempStartIndex; index <= end_index; ++index){
-						sumOfPreviousFRolls = (sumOfPreviousFRolls + penultimateDiceThrow[index]) % (1000000000+7);
+					
+					for(size_t index = tempStartIndex; index <= tempEndIndex; ++index){
+						sum = (sum + memo[index][die_used-1]) % 1000000007;
 					}
 					
-					lastDiceThrow[sum_achieved] = sumOfPreviousFRolls;
-					
-				}//else...
+					memo[sum_achieved][die_used] = sum;
+				}
 				
 				
 			}//inner for loop goes thru rows.
 			
-			penultimateDiceThrow = lastDiceThrow;
-			
-		}//outer for loop is for the dice_thrown.
+		}//outer for goes thru col by col
 		
-		return penultimateDiceThrow[target ];
 		
-	}//func
+		return memo[target][d];
+	}
 };
-
 
 int main(){
 	
@@ -95,9 +96,8 @@ int main(){
 	assert(x.numRollsToTarget(2, 6, 7) == 6);
 	assert(x.numRollsToTarget(2, 6, 12) == 1); //both die need to be 6's so there is only one way to achieve that
 	
+	
 	cout << x.numRollsToTarget(30, 30, 500);
-	
-	
 	
 	
 	
