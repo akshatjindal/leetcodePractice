@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		465F20072451CAB0009C8CC8 /* DP 714 best time to buy and sell stocks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 465F20062451CAB0009C8CC8 /* DP 714 best time to buy and sell stocks.cpp */; };
+		465F200924530FC3009C8CC8 /* DP 1155 Number of Dice Rolls With Target Sum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 465F200824530FC3009C8CC8 /* DP 1155 Number of Dice Rolls With Target Sum.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +31,7 @@
 		465F20012451A1D7009C8CC8 /* getMaxNuts Fall 2019.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "getMaxNuts Fall 2019.cpp"; sourceTree = "<group>"; };
 		465F20042451BA15009C8CC8 /* Zero-Sum Game Winter 2019.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Zero-Sum Game Winter 2019.cpp"; sourceTree = "<group>"; };
 		465F20062451CAB0009C8CC8 /* DP 714 best time to buy and sell stocks.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "DP 714 best time to buy and sell stocks.cpp"; sourceTree = "<group>"; };
+		465F200824530FC3009C8CC8 /* DP 1155 Number of Dice Rolls With Target Sum.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "DP 1155 Number of Dice Rolls With Target Sum.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 		465F1FBA2447462A009C8CC8 = {
 			isa = PBXGroup;
 			children = (
+				465F200824530FC3009C8CC8 /* DP 1155 Number of Dice Rolls With Target Sum.cpp */,
 				465F20062451CAB0009C8CC8 /* DP 714 best time to buy and sell stocks.cpp */,
 				465F20042451BA15009C8CC8 /* Zero-Sum Game Winter 2019.cpp */,
 				465F20012451A1D7009C8CC8 /* getMaxNuts Fall 2019.cpp */,
@@ -120,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465F200924530FC3009C8CC8 /* DP 1155 Number of Dice Rolls With Target Sum.cpp in Sources */,
 				465F20072451CAB0009C8CC8 /* DP 714 best time to buy and sell stocks.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

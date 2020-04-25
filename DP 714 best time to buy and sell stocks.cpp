@@ -96,9 +96,11 @@ int main(){
 	
 	vector<int> test_one = {1,3,2,8};
 	vector<int> test_two = {1,3,2,8,4,9};
+	vector<int> all_decreasing = {10,9,8,5,4};
 	
 	Solution x;
 	assert(x.maxProfit(test_one, 2) == 5);
 	assert(x.maxProfit(test_two, 2) == 8);
+	assert(x.maxProfit(all_decreasing, 2) == 0); 
 	return 0;
 }//main
