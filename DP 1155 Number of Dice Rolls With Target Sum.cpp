@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <vector>
+#include <iostream>
 using namespace std;
 
 class Solution {
@@ -43,47 +44,45 @@ public:
 		
 		
 		for(size_t die_used = 2; die_used <= d; ++die_used){
-				
+			
 			int tempEndIndex = int(die_used*f);
 			//if target > the max sum possible at that die throw, then loop till that max sum possible.
 			
 			if(tempEndIndex > target)
-					tempEndIndex = target; //we don't wanna loop past the target if possible.
-				
+				tempEndIndex = target; //we don't wanna loop past the target if possible.
+			
 			for(size_t sum_achieved = die_used; sum_achieved <= tempEndIndex; ++sum_achieved){
-					
+				
 				if(sum_achieved == die_used)
-						lastDiceThrow[sum_achieved] = 1;
-					//so memo[2][2] means that after rolling 2 die, there is only one way to get to a sum of 2.
+					lastDiceThrow[sum_achieved] = 1;
+				//so memo[2][2] means that after rolling 2 die, there is only one way to get to a sum of 2.
+				
+				else{
+					int sumOfPreviousFRolls = 0;
+					int tempStartIndex = int(sum_achieved - f);
+					if(tempStartIndex < 1)
+						tempStartIndex = 1;
 					
-					else{
-						//say we are on [2][8], and f = 6, then we wanna dgo from [8-6][1] to [1*f = 6][1] and sum it all together.
-						int sum = 0;
-						
-						int tempStartIndex = int(sum_achieved - f);
-						if(tempStartIndex < 1)
-							tempStartIndex = 1;
-						
-						int tempEndIndex = int((die_used - 1)*f);
-						if(tempEndIndex >= sum_achieved)
-							tempEndIndex = int(sum_achieved - 1);
-						
-						
-						for(size_t index = tempStartIndex; index <= tempEndIndex; ++index){
-							sum += penultimateDiceThrow[index];
-						}
-						
-						lastDiceThrow[sum_achieved] = sum;
+					int end_index = int((die_used - 1)*f);
+					if(end_index >= sum_achieved)
+						end_index = int(sum_achieved - 1);
+					
+					for(size_t index = tempStartIndex; index <= end_index; ++index){
+						sumOfPreviousFRolls = (sumOfPreviousFRolls + penultimateDiceThrow[index]) % (1000000000+7);
 					}
 					
+					lastDiceThrow[sum_achieved] = sumOfPreviousFRolls;
 					
-				}//inner for loop goes thru rows.
+				}//else...
 				
-				penultimateDiceThrow = lastDiceThrow;
+				
+			}//inner for loop goes thru rows.
+			
+			penultimateDiceThrow = lastDiceThrow;
 			
 		}//outer for loop is for the dice_thrown.
 		
-		return lastDiceThrow[target];
+		return penultimateDiceThrow[target ];
 		
 	}//func
 };
@@ -96,7 +95,7 @@ int main(){
 	assert(x.numRollsToTarget(2, 6, 7) == 6);
 	assert(x.numRollsToTarget(2, 6, 12) == 1); //both die need to be 6's so there is only one way to achieve that
 	
-	x.numRollsToTarget(30, 30, 500); 
+	cout << x.numRollsToTarget(30, 30, 500);
 	
 	
 	
