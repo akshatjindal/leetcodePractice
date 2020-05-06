@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		465F200924530FC3009C8CC8 /* DP 1155 Number of Dice Rolls With Target Sum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 465F200824530FC3009C8CC8 /* DP 1155 Number of Dice Rolls With Target Sum.cpp */; };
+		465F2020245B1A73009C8CC8 /* Graph: Course Schedule 207 Medium.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 465F201F245B1A73009C8CC8 /* Graph: Course Schedule 207 Medium.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +31,13 @@
 		465F20042451BA15009C8CC8 /* Zero-Sum Game Winter 2019.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Zero-Sum Game Winter 2019.cpp"; sourceTree = "<group>"; };
 		465F20062451CAB0009C8CC8 /* DP 714 best time to buy and sell stocks.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "DP 714 best time to buy and sell stocks.cpp"; sourceTree = "<group>"; };
 		465F200824530FC3009C8CC8 /* DP 1155 Number of Dice Rolls With Target Sum.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "DP 1155 Number of Dice Rolls With Target Sum.cpp"; sourceTree = "<group>"; };
+		465F200A245466FD009C8CC8 /* Same Tree (100) Graph problem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Same Tree (100) Graph problem.cpp"; sourceTree = "<group>"; };
+		465F200C24546BD8009C8CC8 /* max-depth of binary tree (104).cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "max-depth of binary tree (104).cpp"; sourceTree = "<group>"; };
+		465F200E2455EEC3009C8CC8 /* Consecutive Divisible Sum - 281 additional MCQ's.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Consecutive Divisible Sum - 281 additional MCQ's.cpp"; sourceTree = "<group>"; };
+		465F20192459ACDF009C8CC8 /* Hash: Contains Duplicate Easy 219.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Hash: Contains Duplicate Easy 219.cpp"; sourceTree = "<group>"; };
+		465F201B2459B1A4009C8CC8 /* Hash: word patterns Easy 290.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Hash: word patterns Easy 290.cpp"; sourceTree = "<group>"; };
+		465F201D245B057D009C8CC8 /* Hash: Repeated DNA Sequences 187 Medium.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Hash: Repeated DNA Sequences 187 Medium.cpp"; sourceTree = "<group>"; };
+		465F201F245B1A73009C8CC8 /* Graph: Course Schedule 207 Medium.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Graph: Course Schedule 207 Medium.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,13 @@
 		465F1FBA2447462A009C8CC8 = {
 			isa = PBXGroup;
 			children = (
+				465F201F245B1A73009C8CC8 /* Graph: Course Schedule 207 Medium.cpp */,
+				465F201D245B057D009C8CC8 /* Hash: Repeated DNA Sequences 187 Medium.cpp */,
+				465F201B2459B1A4009C8CC8 /* Hash: word patterns Easy 290.cpp */,
+				465F20192459ACDF009C8CC8 /* Hash: Contains Duplicate Easy 219.cpp */,
+				465F200E2455EEC3009C8CC8 /* Consecutive Divisible Sum - 281 additional MCQ's.cpp */,
+				465F200C24546BD8009C8CC8 /* max-depth of binary tree (104).cpp */,
+				465F200A245466FD009C8CC8 /* Same Tree (100) Graph problem.cpp */,
 				465F200824530FC3009C8CC8 /* DP 1155 Number of Dice Rolls With Target Sum.cpp */,
 				465F20062451CAB0009C8CC8 /* DP 714 best time to buy and sell stocks.cpp */,
 				465F20042451BA15009C8CC8 /* Zero-Sum Game Winter 2019.cpp */,
@@ -122,7 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				465F200924530FC3009C8CC8 /* DP 1155 Number of Dice Rolls With Target Sum.cpp in Sources */,
+				465F2020245B1A73009C8CC8 /* Graph: Course Schedule 207 Medium.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
