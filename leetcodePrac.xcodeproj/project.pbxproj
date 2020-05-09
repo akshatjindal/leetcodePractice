@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		465F2020245B1A73009C8CC8 /* Graph: Course Schedule 207 Medium.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 465F201F245B1A73009C8CC8 /* Graph: Course Schedule 207 Medium.cpp */; };
+		4621546F24658B2900071E75 /* Hash: 3Sum (15) Medium.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4621546E24658B2900071E75 /* Hash: 3Sum (15) Medium.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,6 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4621546E24658B2900071E75 /* Hash: 3Sum (15) Medium.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Hash: 3Sum (15) Medium.cpp"; sourceTree = "<group>"; };
 		465F1FC32447462A009C8CC8 /* leetcodePrac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leetcodePrac; sourceTree = BUILT_PRODUCTS_DIR; };
 		465F1FCD244746E7009C8CC8 /* DP53maxSubarray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DP53maxSubarray.cpp; sourceTree = "<group>"; };
 		465F1FFD244C86ED009C8CC8 /* rangeQueriesW19ques.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rangeQueriesW19ques.cpp; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		465F1FBA2447462A009C8CC8 = {
 			isa = PBXGroup;
 			children = (
+				4621546E24658B2900071E75 /* Hash: 3Sum (15) Medium.cpp */,
 				465F201F245B1A73009C8CC8 /* Graph: Course Schedule 207 Medium.cpp */,
 				465F201D245B057D009C8CC8 /* Hash: Repeated DNA Sequences 187 Medium.cpp */,
 				465F201B2459B1A4009C8CC8 /* Hash: word patterns Easy 290.cpp */,
@@ -136,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				465F2020245B1A73009C8CC8 /* Graph: Course Schedule 207 Medium.cpp in Sources */,
+				4621546F24658B2900071E75 /* Hash: 3Sum (15) Medium.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
