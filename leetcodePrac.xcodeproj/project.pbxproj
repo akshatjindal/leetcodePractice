@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46215477246C306F00071E75 /* DP: 62 Unique Paths Medium.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46215476246C306F00071E75 /* DP: 62 Unique Paths Medium.cpp */; };
+		463A8A6D247D60E8000244BB /* Medium (200) Num of Islands.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 463A8A6C247D60E8000244BB /* Medium (200) Num of Islands.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +28,8 @@
 		46215472246975E700071E75 /* DP: Longest Common Subsequence (1143).cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "DP: Longest Common Subsequence (1143).cpp"; sourceTree = "<group>"; };
 		46215474246A974500071E75 /* Single element in an array LC challenge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Single element in an array LC challenge.cpp"; sourceTree = "<group>"; };
 		46215476246C306F00071E75 /* DP: 62 Unique Paths Medium.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "DP: 62 Unique Paths Medium.cpp"; sourceTree = "<group>"; };
+		4621547A246D3A1100071E75 /* Medium 402 Remove K Digits.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Medium 402 Remove K Digits.cpp"; sourceTree = "<group>"; };
+		463A8A6C247D60E8000244BB /* Medium (200) Num of Islands.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Medium (200) Num of Islands.cpp"; sourceTree = "<group>"; };
 		465F1FC32447462A009C8CC8 /* leetcodePrac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leetcodePrac; sourceTree = BUILT_PRODUCTS_DIR; };
 		465F1FCD244746E7009C8CC8 /* DP53maxSubarray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DP53maxSubarray.cpp; sourceTree = "<group>"; };
 		465F1FFD244C86ED009C8CC8 /* rangeQueriesW19ques.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rangeQueriesW19ques.cpp; sourceTree = "<group>"; };
@@ -59,6 +61,8 @@
 		465F1FBA2447462A009C8CC8 = {
 			isa = PBXGroup;
 			children = (
+				463A8A6C247D60E8000244BB /* Medium (200) Num of Islands.cpp */,
+				4621547A246D3A1100071E75 /* Medium 402 Remove K Digits.cpp */,
 				46215476246C306F00071E75 /* DP: 62 Unique Paths Medium.cpp */,
 				46215474246A974500071E75 /* Single element in an array LC challenge.cpp */,
 				46215472246975E700071E75 /* DP: Longest Common Subsequence (1143).cpp */,
@@ -146,7 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46215477246C306F00071E75 /* DP: 62 Unique Paths Medium.cpp in Sources */,
+				463A8A6D247D60E8000244BB /* Medium (200) Num of Islands.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
