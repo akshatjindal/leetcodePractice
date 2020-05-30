@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		463A8A6D247D60E8000244BB /* Medium (200) Num of Islands.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 463A8A6C247D60E8000244BB /* Medium (200) Num of Islands.cpp */; };
+		46F7DAFA24824DB200E7EABC /* 1008. Construct Binary Search Tree from Preorder Traversal 1008.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46F7DAF924824DB200E7EABC /* 1008. Construct Binary Search Tree from Preorder Traversal 1008.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +45,7 @@
 		465F201B2459B1A4009C8CC8 /* Hash: word patterns Easy 290.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Hash: word patterns Easy 290.cpp"; sourceTree = "<group>"; };
 		465F201D245B057D009C8CC8 /* Hash: Repeated DNA Sequences 187 Medium.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Hash: Repeated DNA Sequences 187 Medium.cpp"; sourceTree = "<group>"; };
 		465F201F245B1A73009C8CC8 /* Graph: Course Schedule 207 Medium.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Graph: Course Schedule 207 Medium.cpp"; sourceTree = "<group>"; };
+		46F7DAF924824DB200E7EABC /* 1008. Construct Binary Search Tree from Preorder Traversal 1008.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "1008. Construct Binary Search Tree from Preorder Traversal 1008.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +62,7 @@
 		465F1FBA2447462A009C8CC8 = {
 			isa = PBXGroup;
 			children = (
+				46F7DAF924824DB200E7EABC /* 1008. Construct Binary Search Tree from Preorder Traversal 1008.cpp */,
 				463A8A6C247D60E8000244BB /* Medium (200) Num of Islands.cpp */,
 				4621547A246D3A1100071E75 /* Medium 402 Remove K Digits.cpp */,
 				46215476246C306F00071E75 /* DP: 62 Unique Paths Medium.cpp */,
@@ -150,7 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				463A8A6D247D60E8000244BB /* Medium (200) Num of Islands.cpp in Sources */,
+				46F7DAFA24824DB200E7EABC /* 1008. Construct Binary Search Tree from Preorder Traversal 1008.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
